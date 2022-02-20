@@ -1,81 +1,103 @@
 (() => {
   "use strict";
   const t = {};
-  let e = !0,
-    o = (t = 500) => {
-      let o = document.querySelector("body");
-      if (e) {
-        let c = document.querySelectorAll("[data-lp]");
+  let e = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+      return (
+        e.Android() || e.BlackBerry() || e.iOS() || e.Opera() || e.Windows()
+      );
+    },
+  };
+  let o = !0,
+    n = (t = 500) => {
+      let e = document.querySelector("body");
+      if (o) {
+        let n = document.querySelectorAll("[data-lp]");
         setTimeout(() => {
-          for (let t = 0; t < c.length; t++) {
-            c[t].style.paddingRight = "0px";
+          for (let t = 0; t < n.length; t++) {
+            n[t].style.paddingRight = "0px";
           }
-          (o.style.paddingRight = "0px"),
+          (e.style.paddingRight = "0px"),
             document.documentElement.classList.remove("lock");
         }, t),
-          (e = !1),
+          (o = !1),
           setTimeout(function () {
-            e = !0;
+            o = !0;
           }, t);
       }
     },
-    c = (t = 500) => {
-      let o = document.querySelector("body");
-      if (e) {
-        let c = document.querySelectorAll("[data-lp]");
-        for (let t = 0; t < c.length; t++) {
-          c[t].style.paddingRight =
+    r = (t = 500) => {
+      let e = document.querySelector("body");
+      if (o) {
+        let n = document.querySelectorAll("[data-lp]");
+        for (let t = 0; t < n.length; t++) {
+          n[t].style.paddingRight =
             window.innerWidth -
             document.querySelector(".wrapper").offsetWidth +
             "px";
         }
-        (o.style.paddingRight =
+        (e.style.paddingRight =
           window.innerWidth -
           document.querySelector(".wrapper").offsetWidth +
           "px"),
           document.documentElement.classList.add("lock"),
-          (e = !1),
+          (o = !1),
           setTimeout(function () {
-            e = !0;
+            o = !0;
           }, t);
       }
     };
-  function r(t) {
+  function c(t) {
     setTimeout(() => {
       window.FLS && console.log(t);
     }, 0);
   }
-  function n(t) {
+  function a(t) {
     return t.filter(function (t, e, o) {
       return o.indexOf(t) === e;
     });
   }
-  let s = (t, e = !1, c = 500, n = 0) => {
-    const s = "string" == typeof t ? document.querySelector(t) : t;
-    if (s) {
-      let l = "",
-        a = 0;
+  let s = (t, e = !1, o = 500, r = 0) => {
+    const a = "string" == typeof t ? document.querySelector(t) : t;
+    if (a) {
+      let s = "",
+        l = 0;
       e &&
-        ((l = "header.header"), (a = document.querySelector(l).offsetHeight));
+        ((s = "header.header"), (l = document.querySelector(s).offsetHeight));
       let i = {
         speedAsDuration: !0,
-        speed: c,
-        header: l,
-        offset: n,
+        speed: o,
+        header: s,
+        offset: r,
         easing: "easeOutQuad",
       };
       if (
         (document.documentElement.classList.contains("menu-open") &&
-          (o(), document.documentElement.classList.remove("menu-open")),
+          (n(), document.documentElement.classList.remove("menu-open")),
         "undefined" != typeof SmoothScroll)
       )
-        new SmoothScroll().animateScroll(s, "", i);
+        new SmoothScroll().animateScroll(a, "", i);
       else {
-        let t = s.getBoundingClientRect().top + scrollY;
-        window.scrollTo({ top: a ? t - a : t, behavior: "smooth" });
+        let t = a.getBoundingClientRect().top + scrollY;
+        window.scrollTo({ top: l ? t - l : t, behavior: "smooth" });
       }
-      r(`[gotoBlock]: Юхуу...едем к ${t}`);
-    } else r(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${t}`);
+      c(`[gotoBlock]: Юхуу...едем к ${t}`);
+    } else c(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${t}`);
   };
   t.watcher = new (class {
     constructor(t) {
@@ -98,7 +120,7 @@
         this.scrollWatcherLogging(
           `Проснулся, слежу за объектами (${t.length})...`
         ),
-          n(
+          a(
             Array.from(t).map(function (t) {
               return `${
                 t.dataset.watchRoot ? t.dataset.watchRoot : null
@@ -106,20 +128,20 @@
             })
           ).forEach((e) => {
             let o = e.split("|"),
-              c = { root: o[0], margin: o[1], threshold: o[2] },
+              n = { root: o[0], margin: o[1], threshold: o[2] },
               r = Array.from(t).filter(function (t) {
                 let e = t.dataset.watchRoot ? t.dataset.watchRoot : null,
                   o = t.dataset.watchMargin ? t.dataset.watchMargin : "0px",
                   r = t.dataset.watchThreshold ? t.dataset.watchThreshold : 0;
                 if (
-                  String(e) === c.root &&
-                  String(o) === c.margin &&
-                  String(r) === c.threshold
+                  String(e) === n.root &&
+                  String(o) === n.margin &&
+                  String(r) === n.threshold
                 )
                   return t;
               }),
-              n = this.getScrollWatcherConfig(c);
-            this.scrollWatcherInit(r, n);
+              c = this.getScrollWatcherConfig(n);
+            this.scrollWatcherInit(r, c);
           });
       } else
         this.scrollWatcherLogging("Сплю, нет объектов для слежения. ZzzZZzz");
@@ -174,7 +196,7 @@
         this.scrollWatcherLogging(`Я перестал следить за ${t.classList}`);
     }
     scrollWatcherLogging(t) {
-      this.config.logging && r(`[Наблюдатель]: ${t}`);
+      this.config.logging && c(`[Наблюдатель]: ${t}`);
     }
     scrollWatcherCallback(t, e) {
       const o = t.target;
@@ -235,13 +257,14 @@
       let e = !0 === t ? "webp" : "no-webp";
       document.documentElement.classList.add(e);
     }),
+    e.any() && document.documentElement.classList.add("touch"),
     (function () {
       let t = document.querySelector(".burger");
       t &&
         t.addEventListener("click", function (t) {
-          e &&
+          o &&
             (((t = 500) => {
-              document.documentElement.classList.contains("lock") ? o(t) : c(t);
+              document.documentElement.classList.contains("lock") ? n(t) : r(t);
             })(),
             document.documentElement.classList.toggle("menu-open"));
         });
@@ -252,22 +275,22 @@
           const e = t.target;
           if (e.closest("[data-goto]")) {
             const o = e.closest("[data-goto]"),
-              c = o.dataset.goto ? o.dataset.goto : "",
+              n = o.dataset.goto ? o.dataset.goto : "",
               r = !!o.hasAttribute("data-goto-header"),
-              n = o.dataset.gotoSpeed ? o.dataset.gotoSpeed : "500";
-            s(c, r, n), t.preventDefault();
+              c = o.dataset.gotoSpeed ? o.dataset.gotoSpeed : "500";
+            s(n, r, c), t.preventDefault();
           }
         } else if ("watcherCallback" === t.type && t.detail) {
           const e = t.detail.entry,
             o = e.target;
           if ("navigator" === o.dataset.watch) {
             const t = o.id,
-              c =
+              n =
                 (document.querySelector("[data-goto]._navigator-active"),
                 document.querySelector(`[data-goto="${t}"]`));
             e.isIntersecting
-              ? c && c.classList.add("_navigator-active")
-              : c && c.classList.remove("_navigator-active");
+              ? n && n.classList.add("_navigator-active")
+              : n && n.classList.remove("_navigator-active");
           }
         }
       }
