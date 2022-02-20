@@ -1,0 +1,39 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.title {
+    text-align: end;
+    font-weight: 700;
+    @include adaptiveValue("font-size",100,47);
+    color: #464545;
+    right: 5%;
+    
+}
+h2.title {
+    // @media (max-width:$mobile){
+    //     text-align: center;
+    // }
+}
+
+
+
+.section-header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(15);
+    padding: rem(15) 0 rem(15) rem(15);
+    @media (max-width: 1150px){
+        flex-direction: column;
+        align-items: unset;
+    }
+    // .section-header__title
+    &__title {
+    }
+    // .section-header__subtitle
+    &__subtitle {
+        @media (max-width:$mobile){
+            padding-right: rem(15);
+        }
+    }
+}
