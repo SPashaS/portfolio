@@ -158,9 +158,6 @@ h6 {
   font-size: inherit;
 }
 
-.lock body {
-  touch-action: none;
-}
 body *::selection {
   background-color: rgba(168, 0, 0, 0.726);
   color: #fff;
@@ -724,6 +721,19 @@ body *::selection {
     transform: translate(0);
   }
 }
+.touch .list-work__link .list-work__image-ibg {
+  filter: grayscale(0.9);
+}
+.touch .list-work__link .list-work__more {
+  opacity: 1;
+}
+.touch .list-work__link .list-work__visit::after {
+  width: 5rem;
+  height: 5rem;
+}
+.touch .list-work__link .list-work__info {
+  transform: translate(0);
+}
 .list-work__image-ibg {
   padding-bottom: 100%;
   overflow: hidden;
@@ -849,8 +859,7 @@ body *::selection {
 }
 .social__list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
 }
 @media (min-width: 120em) {
   .social__list {
