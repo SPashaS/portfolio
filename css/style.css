@@ -530,6 +530,9 @@ body *::selection {
   }
 }
 
+.about {
+  min-height: 100vh;
+}
 @media (min-width: 120em) {
   .about {
     padding-bottom: 6.25rem;
@@ -759,7 +762,6 @@ body *::selection {
 .list-work__info {
   padding: 0.625rem;
   font-size: 1.125rem;
-  text-align: center;
   background-color: rgba(153, 0, 0, 0.726);
   position: relative;
   left: 0;
@@ -767,6 +769,11 @@ body *::selection {
   width: 100%;
   transform: translateY(100%);
   transition: transform 0.3s ease 0s;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .contact {
   height: 100vh;
