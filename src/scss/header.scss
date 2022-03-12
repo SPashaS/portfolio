@@ -36,7 +36,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	@media (min-width:$tablet){
+	@media (min-width:$tablet) and (min-height: rem(400)) {
 		width: 100%;
 	}
 	@media (max-width:$tablet),(max-height: rem(400)) {
@@ -54,7 +54,7 @@
 		flex-direction: column;
 		gap: rem(30);
 		justify-content: center;
-		@media (min-width:$tablet){
+		@media (min-width:$tablet) and (min-height: rem(400)){
 			transform: rotate(-90deg);
 			flex-direction: row-reverse;
 		}

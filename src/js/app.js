@@ -26,7 +26,7 @@ import * as flsFunctions from "./files/functions.js";
 /* (i) необходимо для корректного отображения webp из css  */
 flsFunctions.isWebp();
 /* Добавление класса touch для HTML если браузер мобильный */
-// flsFunctions.addTouchClass();
+flsFunctions.addTouchClass();
 /* Добавление loaded для HTML после полной загрузки страницы */
 // flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
@@ -151,7 +151,7 @@ import * as flsForms from "./files/forms/forms.js";
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация по работе в шаблоне: js/libs/watcher.js
 // Сниппет(HTML):
-import './libs/watcher.js';
+// import './libs/watcher.js';
 
 // Функции работы скроллом
 import * as flsScroll from "./files/scroll/scroll.js";
