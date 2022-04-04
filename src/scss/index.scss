@@ -36,28 +36,19 @@
         position: relative;
         margin-bottom: rem(40);
     }
-        
-        span {
-            color: rgba(216, 216, 216, 0.548);
-            position: relative;
-            display: block;
-            top: 0;
-            // height: 140px;
-            overflow: hidden;
-            // @include adaptiveValue("left",200,5);
-            // @include adaptiveValue("height",65,60);
-            @include adaptiveValue("font-size",80,70);
-            @media (max-height: rem(320)){
-                // height: rem(45);
-                // font-size: rem(70);
-            }
+    span {
+        display: block;
+    }
+    span:first-child {
+        color: rgba(216, 216, 216, 0.548);
+        @include adaptiveValue("font-size",90,70);
+    }
+    // .main-screen__subtitle
+    &__subtitle {
+        @media (max-height: rem(320)){
+            font-size: rem(10);
         }
-        // .main-screen__subtitle
-        &__subtitle {
-            @media (max-height: rem(320)){
-                font-size: rem(10);
-            }
-        }
+    }
     
 
         
@@ -158,25 +149,37 @@
 
 	// .about__list
 	&__list {
-        span {
-            
-        }
+        display: inline-flex;
+        flex-direction: column;
 		// .about__list_inline
 		&_inline {
-            // display: inline-flex;
-            // flex-wrap: wrap;
+            flex-direction: row;
+            flex-wrap: wrap;
             .about__item {
-                display: inline;
                 &:not(:last-child) {
-                    margin-right: rem(20);
+                    @include adaptiveValue("margin-right",30,25);
                 }
             }
 		}
 	}
 
-    // .about__text
-    &__text {
-        
+    // .about__item
+    &__item {
+        display: inline-flex;
+        gap: rem(4);
+        &::before {
+            content: "";
+            display: block;
+            position: relative;
+            @include adaptiveValue("top",18,12);
+            left: 0;
+            background-color: #990000;
+            flex: 0 0 rem(7);
+            height: rem(7);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease 0s;
+        }
     }
 
     // .section-header {
