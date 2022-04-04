@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>HTML/CSS верстальщик</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20220404104238" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220404104238">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__body">
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="/" data-goto="#about" class="menu__link" data-aos="fade-right" data-aos-delay="200">
+								<span>обо мне</span>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="/" data-goto="#work" class="menu__link" data-aos="fade-right" data-aos-delay="500">
+								<span>портфолио</span>
+							</a>
+						</li>
+						<li class="menu__item">
+							<a href="/" data-goto="#contact" class="menu__link" data-aos="fade-right" data-aos-delay="800">
+								<span>контакты</span>
+							</a>
+						</li>
+					</ul>
+					<div class="menu__burger burger">
+						<div class="menu__burger-icon burger-icon"><span></span></div>
+					</div>
+				</nav>
+			</div>
+
+		</header>
+		<main id="top" class="page" data-simplebar>
+			<section class="page__main-screen main-screen">
+				<div class="main-screen__container">
+					<h1 class="main-screen__title">
+						<span data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Привет!</span>
+						<span data-aos="fade-up" data-aos-delay="800" data-aos-duration="2000">Меня зовут Паша,</span>
+						<span data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">я HTML/CSS верстальщик</span>
+					</h1>
+				</div>
+			</section>
+			<section id="about" class="section page__about about">
+				<div class="about__section-header section-header">
+					<h2 class="section-header__title title" data-aos="fade-left" data-aos-delay="80" data-aos-duration="500">обо мне</h2>
+					<div class="about__cv"><a target="_blank" class="about__cv-link _icon-cv" href="https://drive.google.com/file/d/1D_FxqmtPwUnbTi174j5q3OigARN2nhY8/view?usp=sharing"><span>Резюме</span></a></div>
+				</div>
+				<div class="about__container">
+					<div class="about__line about__line_right">
+						<div class="about__column">
+							<p class="about__text">
+								Мне 28. Минск, Беларусь.<br>Полгода занимаюсь вёрсткой.<br>
+							</p>
+						</div>
+					</div>
+					<div class="about__line about__line_center">
+						<div class="about__column">
+							<h3 class="about__title">Что делаю:</h3>
+							<ul class="about__list">
+								<li class="about__item">Чистый, кроссбраузерный и валидный код.</li>
+								<li class="about__item">Адаптивная и отзывчивая вёртска.</li>
+								<li class="about__item">Верстаю из PSD, Figma и Zeplin.</li>
+								<li class="about__item">Вёрстка с Pixel Perfect.</li>
+								<li class="about__item">CSS3 анимация.</li>
+								<li class="about__item">Верстка под React.</li>
+								<li class="about__item">Посадка на Wordpress.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="about__line about__line_left">
+						<div class="about__column">
+							<h3 class="about__title">Использую в работе:</h3>
+							<ul class="about__list about__list_inline">
+								<li class="about__item">HTML</li>
+								<li class="about__item">CSS</li>
+								<li class="about__item">SCSS</li>
+								<li class="about__item">БЭМ</li>
+								<li class="about__item">Gulp</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="work" class="section page__work work">
+				<div class="about__section-work section-header">
+					<h2 class="section-header__title title" data-aos="fade-left" data-aos-delay="80" data-aos-duration="500">портфолио</h2>
+				</div>
+				<div class="work__body">
+					<ul class="work__list list-work">
+						<li class="list-work__item">
+							<a target="_blank" href="https://spashas.github.io/robuxfair/" class="list-work__link">
+								<div class="list-work__image-ibg">
+									<picture><source srcset="img/work/robux.webp" type="image/webp"><img src="img/work/robux.jpg" alt="RobuxFair"></picture>
+								</div>
+								<div class="list-work__more">
+									<div class="list-work__info">
+										<h4 class="list-work__title">Адаптивная вёрстка сайта «RobuxFair»</h4>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="list-work__item">
+							<a target="_blank" href="https://spashas.github.io/funiro-shop/" class="list-work__link">
+								<div class="list-work__image-ibg">
+									<picture><source srcset="img/work/funiro.webp" type="image/webp"><img src="img/work/funiro.jpg" alt="Mozi"></picture>
+								</div>
+								<div class="list-work__more">
+									<div class="list-work__info">
+										<h4 class="list-work__title">Адаптивная вёрстка интернет магазина «Funiro»</h4>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="list-work__item">
+							<a target="_blank" href="https://spashas.github.io/mozi/" class="list-work__link">
+								<div class="list-work__image-ibg">
+									<picture><source srcset="img/work/mozi.webp" type="image/webp"><img src="img/work/mozi.jpg" alt="Mozi"></picture>
+								</div>
+								<div class="list-work__more">
+									<div class="list-work__info">
+										<h4 class="list-work__title">Адаптивная вёрстка 5-ти страничного сайта «Mozi»</h4>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="list-work__item">
+							<a target="_blank" href="https://spashas.github.io/providence/" class="list-work__link">
+								<div class="list-work__image-ibg">
+									<picture><source srcset="img/work/Providence.webp" type="image/webp"><img src="img/work/Providence.jpg" alt="NEWProvidence"></picture>
+								</div>
+								<div class="list-work__more">
+									<div class="list-work__info">
+										<h4 class="list-work__title">Адаптивная вёрстка landing page «NEWProvidence»</h4>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="list-work__item">
+							<a target="_blank" href="https://spashas.github.io/smoothie-project/" class="list-work__link">
+								<div class="list-work__image-ibg">
+									<picture><source srcset="img/work/smoothie.webp" type="image/webp"><img src="img/work/smoothie.jpg" alt="Smoothies"></picture>
+								</div>
+								<div class="list-work__more">
+									<div class="list-work__info">
+										<h4 class="list-work__title">Адаптивная вёрстка landing page «Smoothies»</h4>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="list-work__item">
+							<a target="_blank" href="https://spashas.github.io/GoCorona/" class="list-work__link">
+								<div class="list-work__image-ibg">
+									<picture><source srcset="img/work/gocorona.webp" type="image/webp"><img src="img/work/gocorona.jpg" alt="GoCorona"></picture>
+								</div>
+								<div class="list-work__more">
+									<div class="list-work__info">
+										<h4 class="list-work__title">Адаптивная вёрстка landing page «GoCorona»</h4>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="list-work__item">
+							<a target="_blank" href="https://spashas.github.io/helyfly-project/" class="list-work__link">
+								<div class="list-work__image-ibg">
+									<picture><source srcset="img/work/helyfly.webp" type="image/webp"><img src="img/work/helyfly.jpg" alt="Helyfly"></picture>
+								</div>
+								<div class="list-work__more">
+									<div class="list-work__info">
+										<h4 class="list-work__title">Адаптивная вёрстка landing page «Helyfly»</h4>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="list-work__item">
+							<a target="_blank" href="https://spashas.github.io/bicycles-project/" class="list-work__link">
+								<div class="list-work__image-ibg">
+									<picture><source srcset="img/work/aod.webp" type="image/webp"><img src="img/work/aod.jpg" alt="AOD"></picture>
+								</div>
+								<div class="list-work__more">
+									<div class="list-work__info">
+										<h4 class="list-work__title">Адаптивная вёрстка landing page «AOD»</h4>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="list-work__item">
+							<a target="_blank" href="https://spashas.github.io/archmove/" class="list-work__link">
+								<div class="list-work__image-ibg">
+									<picture><source srcset="img/work/archmove.webp" type="image/webp"><img src="img/work/archmove.jpg" alt="Archmove"></picture>
+								</div>
+								<div class="list-work__more">
+
+									<div class="list-work__info">
+										<h4 class="list-work__title">Адаптивная вёрстка landing page «Archmove»</h4>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="contact" class="section page__contact contact">
+				<div class="about__section-header section-header">
+					<h2 class="section-header__title title" data-aos="fade-left" data-aos-delay="80" data-aos-duration="500">контакты</h2>
+				</div>
+				<div class="contact__container">
+					<div class="contact__social social">
+						<ul class="social__list">
+							<li class="social__item">
+								<a href="tel:+375292206346" class="social__link _icon-phone"></a>
+							</li>
+							<li class="social__item">
+								<a target="_blank" href="https://t.me/SPashaS" class="social__link _icon-telegram"></a>
+							</li>
+							<li class="social__item">
+								<a href="mailto:spavel.ld@gmail.com" class="social__link _icon-mail"></a>
+							</li>
+							<li class="social__item">
+								<a target="_blank" href="https://github.com/SPashaS" class="social__link _icon-github"></a>
+							</li>
+							<li class="social__item">
+								<a target="_blank" href="https://www.linkedin.com/in/pavel-skopets-6039b0216/" class="social__link _icon-linkedin"></a>
+							</li>
+
+						</ul>
+					</div>
+					<!-- <form action="#" class="contact__form form">
+								<div class="form__line">
+									<div class="form__item">
+										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Name*" data-required class="form__input">
+									</div>
+									<div class="form__item">
+										<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="Email*" data-required class="form__input">
+									</div>
+								</div>
+								<div class="form__item">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Subject" class="form__input">
+								</div>
+								<div class="form__item">
+									<textarea autocomplete="off" name="form[]" placeholder="Message*" data-error="Ошибка" data-required class="form__input"></textarea>
+								</div>
+								<div class="form__footer">
+									<button type="submit" class="form__button button">Send!
+										<span class="button__border"></span>
+									</button>
+								</div>
+							</form> -->
+				</div>
+			</section>
+			<a href="/" data-goto="#top" class="go-top _icon-arrow"></a>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20220404104238"></script>
+	<script src="js/app.min.js?_v=20220404104238"></script>
+</body>
+
+</html>
